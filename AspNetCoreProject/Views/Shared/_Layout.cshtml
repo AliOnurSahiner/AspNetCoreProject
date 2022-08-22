@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/content/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    @*NavBar*@
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">AspNetCore Project</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav m-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Link</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav m-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Link</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    @*NavBar*@
+    <div class="mt-2">
+        @RenderBody()
+    </div>
+
+</body>
+</html>

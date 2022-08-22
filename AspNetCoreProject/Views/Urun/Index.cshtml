@@ -1,0 +1,18 @@
+﻿@using AspNetCoreProject.Entites
+@model List<Urun>
+
+
+ <table class="table table-sm table-bordered"> 
+     @foreach (var item in Model)
+    {
+       <tr>
+           <td>@item.Id</td>
+           <td>@item.Ad</td>
+           <td>@item.Fiyat</td>
+
+       </tr>
+    }
+
+
+
+ </table>
