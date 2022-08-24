@@ -60,6 +60,11 @@ namespace AspNetCoreProject
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name: "aryaRoute",
+                    pattern:"Arya", // Controllerda /Arya diye bir istek gelirse 
+                    defaults: new { controller ="Home",Action = "Index" }//aþaðýdaki controlleri çalýþtýr.Örnek : localhost:45698/Arya=localhost:45698/Home/Index
+                    ) ;
                 endpoints.MapControllerRoute(name:default,pattern:"{controller}/{action}/{id?}");
             });
         }

@@ -20,7 +20,7 @@ using AspNetCoreProject.Entites;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"99c0f42004b0e5dd39a910a340205c87592ec022", @"/Views/Shared/Components/UrunList/default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c4c7aca84e32667f3d93bdad189216a539597358", @"/Views/Shared/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2da4b74b0b5e08a457f3257fdb8480d2d7cd8799", @"/Views/Shared/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Shared_Components_UrunList_default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Urun>>
     #nullable disable

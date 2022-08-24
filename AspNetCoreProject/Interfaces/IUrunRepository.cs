@@ -5,6 +5,6 @@ namespace AspNetCoreProject.Interfaces
 {
     public interface IUrunRepository:IGenericRepository<Urun>
     {
-
+        List<Kategori> GetirKategoriForUrun(int urunId);
     }
 }
