@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AspNetCoreProject.Controllers
 {
-    //[Route("Arya/[Action]")] // localhost:45698/Arya/Index demektir bu startup classındaki maproute'ı ezer. 
+    //[Route("Arya/[Action]")] // localhost:45698/Arya/Index demektir bu startup classındaki maproute'ı ezer. Sadece bu route ile çalışır.
     public class HomeController : Controller
     {
         public IUrunRepository _urunRepository;

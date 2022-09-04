@@ -11,7 +11,7 @@ namespace AspNetCoreProject.Repositories
 
         //Urunun kategorilerinin getirilmesi işlemi
 
-        public List<Kategori> GetirKategoriForUrun(int urunId)
+        public List<Kategori> GetirKategoriForUrun(int urunId) //Bir ürünün birden fazla kategorisi olabilir.
         {
             using var context = new AspNetCoreContext();
             var urn = context.Uruns.Join(context.UrunsKategoris, u => u.Id, uk => uk.UrunId, (u, uk) => new { u, uk })

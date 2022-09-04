@@ -22,13 +22,14 @@ namespace AspNetCoreProject.TagHelpers
             //stringBuilder.Append();
 
             string data = "";
-            var gelenkategoriler = _urunRepository.GetirKategoriForUrun(UrunId).Select(I => I.Ad);
-            foreach (var item in gelenkategoriler)
+            var gelenKategoriler = _urunRepository.GetirKategoriForUrun(UrunId).Select(I => I.Ad);
+            foreach (var item in gelenKategoriler)
             {
                 data += item + " ";
             }
             output.Content.SetContent(data);
         }
+     
 
     }
 }

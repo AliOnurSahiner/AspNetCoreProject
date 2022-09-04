@@ -60,6 +60,7 @@ namespace AspNetCoreProject
 
             app.UseEndpoints(endpoints =>
             {
+                //Özel olan genel olanýn üstüne yazýlýr localhost:44635/Arya yazmak için
                 endpoints.MapControllerRoute(
                     name: "aryaRoute",
                     pattern:"Arya", // Controllerda /Arya diye bir istek gelirse 
