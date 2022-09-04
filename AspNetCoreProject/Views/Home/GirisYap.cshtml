@@ -1,0 +1,31 @@
+﻿@using AspNetCoreProject.Models
+@model KullaniciGirisModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+@addTagHelper AspNetCoreProject.TagHelpers.*,AspNetCoreProject
+
+@using (Html.BeginForm("GirisYap", "Home", FormMethod.Post))
+{
+    <form asp-action="GirisYap" method="post" class="p-4 w-50 mx-auto">
+    <div class="form-group">
+          <label>Kullanıcı Adı :</label>
+        <input type="text" name="KullaniciAd" value="" class="form-control" /> @*Ya da <input type="text" asp-for=KullaniciAd value="" />*@
+    </div>
+
+     <div class="form-group">
+          <label>Parola:</label>
+        <input type="password" asp-for=Sifre value="" class="form-control" />
+    </div>
+
+     <div class="form-check">
+        <input type="checkbox" asp-for=BeniHatirla value="" class="form-check-input" />
+        <label asp-for=BeniHatirla class="form-check-label">Beni Hatırla</label>
+    </div>
+
+     <div class="form-group">
+         <button type="submit" class="btn btn-block  btn-info">Giriş Yap</button>
+    </div>
+   
+</form>
+
+}

@@ -1,9 +1,10 @@
 ﻿using AspNetCoreProject.Entites;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace AspNetCoreProject.Contexts
 {
-    public class AspNetCoreContext:DbContext
+    public class AspNetCoreContext:IdentityDbContext<AppUser> //Identity için böyle bir  IdentityDbContext'ten türettik normalde DbContextten türer.
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -11,6 +12,7 @@ namespace AspNetCoreProject.Contexts
             //optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Northwind;Trusted_Connection=true");
             optionsBuilder
             .UseSqlServer("Server=localhost ,1434;Database=AspNetCoreProject;User Id=SA;Password=Arya!1234;");
+            base.OnConfiguring(optionsBuilder);//DbContexte gönderdik 
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) //Tabloları birbirine bağladık
@@ -25,6 +27,7 @@ namespace AspNetCoreProject.Contexts
                 I.KategoriId,
                 I.UrunId
             }).IsUnique();
+            base.OnModelCreating(modelBuilder);//DbContexte gönderdik 
         }
 
         public DbSet<Urun> Uruns { get; set; }

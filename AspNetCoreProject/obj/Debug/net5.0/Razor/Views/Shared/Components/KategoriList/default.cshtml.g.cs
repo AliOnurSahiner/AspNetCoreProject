@@ -19,8 +19,15 @@ using AspNetCoreProject.Entites;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\onur5\source\repos\AspNetCoreProject\AspNetCoreProject\Views\Shared\_ViewImports.cshtml"
+using AspNetCoreProject.Models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ee4e3b87e2731e437438d4e5625d92c646bc8204", @"/Views/Shared/Components/KategoriList/default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2da4b74b0b5e08a457f3257fdb8480d2d7cd8799", @"/Views/Shared/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"aab207d80e6e55070211edee79a8f1081bf488f1", @"/Views/Shared/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Shared_Components_KategoriList_default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Kategori>>
     #nullable disable

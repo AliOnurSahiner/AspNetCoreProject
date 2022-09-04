@@ -19,8 +19,15 @@ using AspNetCoreProject.Entites;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\onur5\source\repos\AspNetCoreProject\AspNetCoreProject\Views\Shared\_ViewImports.cshtml"
+using AspNetCoreProject.Models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"99c0f42004b0e5dd39a910a340205c87592ec022", @"/Views/Shared/Components/UrunList/default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2da4b74b0b5e08a457f3257fdb8480d2d7cd8799", @"/Views/Shared/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"aab207d80e6e55070211edee79a8f1081bf488f1", @"/Views/Shared/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Shared_Components_UrunList_default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Urun>>
     #nullable disable
@@ -82,7 +89,7 @@ using AspNetCoreProject.Entites;
 #nullable disable
             WriteLiteral("</p>\r\n");
             WriteLiteral("                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "99c0f42004b0e5dd39a910a340205c87592ec0225381", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "99c0f42004b0e5dd39a910a340205c87592ec0225591", async() => {
                 WriteLiteral("Detay Göster");
             }
             );
