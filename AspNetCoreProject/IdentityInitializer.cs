@@ -24,7 +24,7 @@ namespace AspNetCoreProject
                     Name = "Admin",
                 };
                 var identityResult = roleManager.CreateAsync(identityRole).Result;
-                var userResult =appUser.AddToRoleAsync(user, identityRole.Name).Result;
+                var userResult =appUser.AddToRoleAsync(user, identityRole.Name).Result; // Admin kullanıcısı oluşturuken nihai yer burasıdır.
             }
 
         }

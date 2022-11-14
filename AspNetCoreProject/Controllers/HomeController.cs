@@ -1,8 +1,12 @@
 ﻿using AspNetCoreProject.Contexts;
+using AspNetCoreProject.Entites;
 using AspNetCoreProject.Interfaces;
 using AspNetCoreProject.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace AspNetCoreProject.Controllers
 {
@@ -10,11 +14,15 @@ namespace AspNetCoreProject.Controllers
     public class HomeController : Controller
     {
         AspNetCoreContext db = new AspNetCoreContext();
+        private readonly SignInManager<AppUser> _signInManager;
         public IUrunRepository _urunRepository;
+        private readonly IKategoriRepository _kategoriRepository;
        
-        public HomeController(IUrunRepository urunRepository)
+        public HomeController(IUrunRepository urunRepository, IKategoriRepository kategoriRepository, SignInManager<AppUser> signInManager)
         {
+            _signInManager = signInManager;
             _urunRepository = urunRepository;
+            _kategoriRepository = kategoriRepository;
         }
         public IActionResult Index()
         {
@@ -59,8 +67,62 @@ namespace AspNetCoreProject.Controllers
         [HttpPost]
         public IActionResult GirisYap(KullaniciGirisModel model)
         {
+            if (ModelState.IsValid)
+            {
+                var signInResult = _signInManager.PasswordSignInAsync(model.KullaniciAd,model.Sifre,model.BeniHatirla,false).Result;
+                if (signInResult.Succeeded)
+                {
+                    return RedirectToAction("Index","Home",new {area="Admin"});
+                }
+                ModelState.AddModelError("", "Kullanıcı adı veya parola hatalı!");
+            }
             //var kullaniciBilgileri = db.Users.Find(x=>x.u);
             return View(new KullaniciGirisModel());
+        }
+
+        public IActionResult AtaKategori(int id)  // buradaki Id Urun Id
+        {
+            TempData["UrunId"] = id;
+            var urununKategorisi = _urunRepository.GetirKategoriForUrun(id).Select(x=>x.Ad);
+            var getirKategori = _kategoriRepository.GetirHepsi();
+            List<KategoriAtaModel> kategoriAtaModels = new List<KategoriAtaModel>();
+
+            foreach (var item in getirKategori)
+            {
+                KategoriAtaModel kategoriAtaModel = new KategoriAtaModel();
+                kategoriAtaModel.KategoriId = item.Id;
+                kategoriAtaModel.KategoriAd = item.Ad;
+                kategoriAtaModel.VarMi = urununKategorisi.Contains(item.Ad);
+                kategoriAtaModels.Add(kategoriAtaModel);
+            }
+            return View(kategoriAtaModels);
+        }
+        [HttpPost]
+        public IActionResult AtaKategori(List<KategoriAtaModel> kategoriAtaModels)  // buradaki Id Urun Id
+        {
+            int urunId = (int)TempData["UrunId"];
+            foreach (var item in kategoriAtaModels)
+            {
+                if (item.VarMi)
+                {
+                    _urunRepository.EkleKategori(new UrunKategori
+                    {
+                        KategoriId = item.KategoriId,
+                        UrunId = urunId
+
+                    });
+                }
+                else
+                {
+                    _urunRepository.SilKategori(new UrunKategori
+                    {
+                        KategoriId = item.KategoriId,
+                        UrunId = urunId
+
+                    });
+                }
+            }
+            return RedirectToAction("Index"); 
         }
     }
 }

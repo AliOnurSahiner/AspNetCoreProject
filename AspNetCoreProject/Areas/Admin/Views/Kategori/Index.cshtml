@@ -1,0 +1,24 @@
+﻿@model List<Kategori>
+<a asp-action="Ekle" asp-controller="Kategori" asp-area="Admin" class=" btn btn-primary btn-sm my-2">Kategori Ekle</a>
+<table class="table table-sm table-bordered table-stripped table-hover">
+    <tr>
+        <th>ID</th>
+        <th>Ürün Adı</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Ad</td>
+            <td>
+                <a asp-action="Guncelle" asp-area="Admin" asp-route-id="@item.Id" asp-controller="Kategori" class="btn btn-warning bt-sm">Güncelle</a>   @*asp-route-id Id taşımak için gerekli bir tag helperdır.*@
+            </td>
+
+            <td>
+                <a asp-action="Sil" asp-area="Admin" asp-route-id="@item.Id" asp-controller="Kategori" class="btn btn-danger bt-sm">Sil</a>   @*asp-route-id Id taşımak için gerekli bir tag helperdır.*@
+            </td>
+        </tr>
+
+    }
+</table>
+

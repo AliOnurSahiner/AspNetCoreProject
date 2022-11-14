@@ -82,3 +82,11 @@ C:\Users\onur5\source\repos\AspNetCoreProject\AspNetCoreProject\bin\Debug\net5.0
 C:\Users\onur5\source\repos\AspNetCoreProject\AspNetCoreProject\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\onur5\source\repos\AspNetCoreProject\AspNetCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\Home\Index.cshtml.g.cs
 C:\Users\onur5\source\repos\AspNetCoreProject\AspNetCoreProject\obj\Debug\net5.0\Razor\Views\Home\GirisYap.cshtml.g.cs
+C:\Users\onur5\source\repos\AspNetCoreProject\AspNetCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\onur5\source\repos\AspNetCoreProject\AspNetCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\onur5\source\repos\AspNetCoreProject\AspNetCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\onur5\source\repos\AspNetCoreProject\AspNetCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\Home\Ekle.cshtml.g.cs
+C:\Users\onur5\source\repos\AspNetCoreProject\AspNetCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\Home\Guncelle.cshtml.g.cs
+C:\Users\onur5\source\repos\AspNetCoreProject\AspNetCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\Kategori\Index.cshtml.g.cs
+C:\Users\onur5\source\repos\AspNetCoreProject\AspNetCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\Kategori\Ekle.cshtml.g.cs
+C:\Users\onur5\source\repos\AspNetCoreProject\AspNetCoreProject\obj\Debug\net5.0\Razor\Areas\Admin\Views\Kategori\Guncelle.cshtml.g.cs

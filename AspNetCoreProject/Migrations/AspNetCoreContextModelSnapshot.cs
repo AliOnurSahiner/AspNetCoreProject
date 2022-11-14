@@ -121,6 +121,9 @@ namespace AspNetCoreProject.Migrations
                     b.Property<decimal>("Fiyat")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<string>("Resim")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Uruns");

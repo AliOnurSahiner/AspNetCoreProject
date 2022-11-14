@@ -44,11 +44,11 @@ namespace AspNetCoreProject
 
             services.ConfigureApplicationCookie(options =>
             {
-                options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Home/GirisYap");
-                options.Cookie.Name = "AspNetCoreProject";
-                options.Cookie.HttpOnly = true;
-                options.Cookie.SameSite = Microsoft.AspNetCore.Http.SameSiteMode.Strict;
-                options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+                options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Home/GirisYap");  //Account login yerine /Home/G,r,syap olarak ayarladýk.
+                options.Cookie.Name = "AspNetCoreProject";//cookie nin tarayýcýda gözüken hali
+                options.Cookie.HttpOnly = true;//Javascript tarafýndan cookie çekilsin mi çekilmesin mi ? 
+                options.Cookie.SameSite = Microsoft.AspNetCore.Http.SameSiteMode.Strict; // Strict yerine Lax yaparsak herkes cookie ye eriþebilir manasýnda dýr. 
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(30);//cookie ne kadar ayakta kalsýn ?
             });
 
 

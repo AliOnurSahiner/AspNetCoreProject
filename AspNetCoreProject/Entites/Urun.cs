@@ -11,6 +11,9 @@ namespace AspNetCoreProject.Entites
         public int Id { get; set; }
         //[Required(ErrorMessage = "Ad boş geçilemez")]
         public string Ad { get; set; }
+
+        public string Resim { get; set; }
+
         //[Column(TypeName ="ntext")]
         //[Required(ErrorMessage = "Aciklama boş geçilemez")]
         public string Aciklama { get; set; }

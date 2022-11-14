@@ -1,0 +1,18 @@
+﻿@model AddKategoriModel
+
+<form asp-action="Ekle" asp-controller="Kategori" asp-area="Admin" method="post" class="w-75 mx-auto p-3" enctype="multipart/form-data">  @*enctype yazmamızın nedeni file post olduğunda null göndermemek*@
+    <div class="form-group">
+        <label>Kategori Adı:</label>
+        <span asp-validation-for="KategoriAd" class="text-danger"></span>
+        <input asp-for="KategoriAd" class="form-control"/>
+    </div>
+   <br />
+     <div class="form-group">
+         <a asp-action="Index" asp-area="Admin" asp-controller="Kategori" class="btn btn-warning ">Vazgeç</a>
+      <button type="submit" class="btn btn-primary">Kaydet</button>
+    </div>
+</form>
+@section Javascript{  @* Bunlar clientside validation için yazıldı.*@
+       <script src="~/jquery-valid/jquery.validate.min.js"></script>
+       <script src="~/jquery-unob/jquery.validate.unobtrusive.min.js"></script>  
+}
